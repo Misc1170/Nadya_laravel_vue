@@ -1,20 +1,34 @@
 <script setup>
-import {VueperSlides, VueperSlide} from 'vueperslides'
-import 'vueperslides/dist/vueperslides.css'
+import {VCarousel, VCarouselItem} from "vuetify/components";
 
+const photos = [
+    {
+        src: 'https://cdn.vuetifyjs.com/images/cards/docks.jpg'
+    },
+    {
+        src: 'https://cdn.vuetifyjs.com/images/cards/hotel.jpg'
+    },
+    {
+        src: 'https://cdn.vuetifyjs.com/images/cards/sunshine.jpg'
+    },
+];
 </script>
 
 <template>
 
-    <vueper-slides
-        class="no-shadow"
-        :visible-slides="3"
-        :slide-ratio="1 / 4"
-        :dragging-distance="70">
-        <vueper-slide v-for="i in 6"
-                      :key="i"
-                      :title="i.toString()"/>
-    </vueper-slides>
+    <v-carousel
+        class="rounded-xl"
+        show-arrows=""
+        color="yellow"
+        next-icon="red"
+        next="red"
+    >
+        <v-carousel-item
+            v-for="photo in photos"
+            :src="photo"
+            cover
+        ></v-carousel-item>
+    </v-carousel>
 
 </template>
 

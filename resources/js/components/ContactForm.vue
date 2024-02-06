@@ -1,13 +1,18 @@
 <script setup>
+import {IMaskDirective as vIMaskDirective} from 'vue-imask';
 
+const phoneNumberMask = {
+    mask: '+{7}(000) 000-00-00',
+    lazy: false
+};
 </script>
 
 <template>
     <form
         action=""
         method="post"
-        class="bg-no-repeat bg-center bg-cover rounded-xl pb-10 px-24"
-        style="background-image: url('../images/form_bg.jpg')">
+        class="bg-no-repeat bg-center bg-cover rounded-xl pb-10 px-24 w-50"
+        style="background-image: url('images/form_bg.jpg')">
         <p class="text-center text-663434 py-10">А теперь мне хотелось бы познакомиться с Вами :)</p>
         <div class="flex flex-col justify-center gap-6">
             <input
@@ -15,13 +20,16 @@
                 placeholder='Имя и Фамилия (Отчество, если Вам это принципиально)'
                 class="course-category__input"
             />
-            <input
-                type="text"
-                placeholder='Контактный номер телефона'
-                class="course-category__input"
-            />
 
-            <div class="rounded-xl" style="background-color: #A9ADD4">
+            <input
+                class="course-category__input"
+                v-i-mask-directive="phoneNumberMask"
+                type="text"
+                name="phone"
+                id="phone"
+                placeholder="123123">
+
+            <div class="rounded-xl py-2.5" style="background-color: #A9ADD4">
 
                 <p class="text-663434 text-center">Какое направление Вас интересует?</p>
                 <div class="container">
@@ -40,12 +48,12 @@
                 </div>
 
             </div>
-
-            <textarea
-                placeholder="Если остались вопросы, пожелания, предложения, то пишите здесь. Я с радостью, на все отвечу."
-                style="background-color: #A9ADD4"
+            <v-textarea
                 class="course-category__input"
-            ></textarea>
+                label="Если остались вопросы, пожелания, предложения, то пишите здесь"
+                variant="underlined"
+            >
+            </v-textarea>
         </div>
     </form>
 </template>

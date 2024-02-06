@@ -136,11 +136,10 @@ function showTextBlock(index) {
             </leaf>
         </div>
     </div>
-    <div class="py-10 flex flex-col items-center">
-        <leaf-text-block
-            v-if="isVisible"
-            :text-blocks="leafs[selectedTextBlockId].textBlocks" />
-    </div>
+    <leaf-text-block
+        v-if="isVisible"
+        :text-blocks="leafs[selectedTextBlockId].textBlocks"
+    />
 
 </template>
 

@@ -5,15 +5,22 @@ defineProps({
 </script>
 
 <template>
-    <div
-        v-for="(textBlock, i) in textBlocks"
-        class="leaf_text_block ">
-        <p>{{ textBlock.title }}</p>
-        <span>{{ textBlock.text }}</span>
+    <div class="py-10 flex flex-col items-center">
+        <div
+            v-for="(textBlock, i) in textBlocks"
+            class="leaf_text_block ">
+            <p>{{ textBlock.title }}</p>
+            <span>{{ textBlock.text }}</span>
+        </div>
     </div>
 </template>
 
-<style scoped>
+<style lang="scss">
+$toLeft: 200px;
+$toRight: 200px;
+$toTop: 200px;
+$toBottom: 200px;
+
 .leaf_text_block {
     background-image: url('/images/cloud_bg.png');
     display: flex;
@@ -24,7 +31,8 @@ defineProps({
     border-radius: 38px;
 
     position: relative;
-    animation-duration: 1.5s;
+    animation-name: leftToRight;
+    animation-duration: 1.2s;
 
     p {
         font-size: 23px;
@@ -39,11 +47,28 @@ defineProps({
 }
 
 @keyframes leftToRight {
-    0%   {right:20%; bot:30%; opacity: 0}
-    100% {right:0px; top:0px; opacity: 1}
+    0% {
+        right: $toLeft;
+        bottom: $toBottom;
+        opacity: 0
+    }
+    100% {
+        right: 0;
+        bottom: 0;
+        opacity: 1
+    }
 }
+
 @keyframes rightToLeft {
-    0%   {left:20%; top:30%;}
-    100% {left:0px; top:0px;}
+    0% {
+        left: $toRight;
+        top: 30%;
+        opacity: 0
+    }
+    100% {
+        left: 0;
+        top: 0;
+        opacity: 1
+    }
 }
 </style>

@@ -14,7 +14,6 @@
 </head>
 <body>
 <div id="app" class="bg-F6E1A9">
-    <carousel></carousel>
     {{--        БЛОК С ФОТКОЙ НАДИ И ТЕКСТ--}}
     <div>
         <img class="" src="{{ asset('images/banner.png') }}" alt="BANNER"/>
@@ -39,11 +38,11 @@
             </div>
         </div>
     </div>
-    {{--=====================================================================--}}
+    {{--    БЛОК С ЛИСТЬЯМИ--}}
     <leaf-wrapper></leaf-wrapper>
 
-    <div class="container grid grid-cols-2 justify-center py-20 gap-x-10">
-        <div class="flex flex-col gap-y-4 justify-center col-span-1 pl-24 py-14">
+    <div class="container grid grid-cols-2 justify-center p-20 gap-x-10">
+        <div class="flex flex-col gap-y-4 justify-center col-span-1 py-14">
             <p>Мне с детства интересно наблюдать за людьми, их поведением, состоянием. Попытка проанализировать и
                 понять
                 переживания другого, как захватывающий квест, который неизвестно куда приведет.</p>
@@ -53,12 +52,19 @@
                 невозможно
                 вобрать в себя все и сразу. Но Вы не одни, я буду сопровождать Вас и стоять рядом.</p>
         </div>
-        <div style="background: #D9D9D9"></div>
+        <carousel></carousel>
     </div>
-
+    {{--ФОРМА--}}
     <div class="flex justify-center">
         <contact-form></contact-form>
     </div>
+    {{--ОТЗЫВЫ--}}
+    <reviews></reviews>
+
+    <div class="p-20">
+        <carousel></carousel>
+    </div>
+    <img class="" src="{{ asset('images/banner.png') }}" alt="FOOTER"/>
 </div>
 </body>
 </html>
