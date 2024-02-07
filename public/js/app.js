@@ -20378,7 +20378,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".leaf_text_block {\n  background-image: url(\"/images/cloud_bg.png\");\n  display: flex;\n  flex-direction: column;\n  width: 50%;\n  margin: 20px 0;\n  padding: 10px 40px;\n  border-radius: 38px;\n  position: relative;\n  animation-name: leftToRight;\n  animation-duration: 1.2s;\n}\n.leaf_text_block p {\n  font-size: 23px;\n  text-align: center;\n  color: #663434;\n}\n.leaf_text_block span {\n  font-size: 17px;\n  color: #663434;\n}\n@keyframes leftToRight {\n0% {\n    right: 200px;\n    bottom: 200px;\n    opacity: 0;\n}\n100% {\n    right: 0;\n    bottom: 0;\n    opacity: 1;\n}\n}\n@keyframes rightToLeft {\n0% {\n    left: 200px;\n    top: 30%;\n    opacity: 0;\n}\n100% {\n    left: 0;\n    top: 0;\n    opacity: 1;\n}\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".leaf_text_block {\n  background: linear-gradient(90deg, rgb(251, 251, 251) 65%, rgb(174, 174, 200) 100%, rgb(0, 212, 255) 100%);\n  display: flex;\n  flex-direction: column;\n  width: 50%;\n  margin: 20px 0;\n  padding: 10px 40px;\n  border-radius: 38px;\n  position: relative;\n  animation-duration: 1.2s;\n}\n.leaf_text_block p {\n  font-size: 23px;\n  text-align: center;\n  color: #663434;\n}\n.leaf_text_block span {\n  font-size: 17px;\n  color: #663434;\n}\n@keyframes leftToRight {\n0% {\n    right: 200px;\n    bottom: 200px;\n    opacity: 0;\n}\n100% {\n    right: 0;\n    bottom: 0;\n    opacity: 1;\n}\n}\n@keyframes rightToLeft {\n0% {\n    left: 200px;\n    top: 200px;\n    opacity: 0;\n}\n100% {\n    left: 0;\n    top: 0;\n    opacity: 1;\n}\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -22974,11 +22974,44 @@ __webpack_require__.r(__webpack_exports__);
       'image': 'images/leaves/akterskie_intensivi.png',
       'title': 'Актерские интенсивы',
       'textBlocks': [{
-        text: '1'
+        title: 'Основная информация\n',
+        text: 'Краткосрочные курсы актерского мастерства длительностью от 1 до 2 месяцев, включающие в себя различные тренинги и упражнения на развитие и проработку мышечных зажимов, телесного раскрепощения, сценического внимания и памяти, фантазии, работе и взаимодействию с партнером, умению импровизировать, постановки речи, преодолению своих страхов перед публикой.\n' + 'За достаточно короткий срок Вы овладеете инструментами, которые могут Вам в дальнейшей жизни. Вы не станете актерами, но узнаете что-то новое, расширите границы своего сознания и посмотрите на себя в творческом начале.\n' + 'Сделай шаг к себе!'
       }, {
-        text: '2'
+        title: 'Правила приема',
+        text: 'Нет кастингов и вступительных испытаний, набор открыт для всех желающих от 18 лет. . Количество мест в группах ограниченно, набираем 15-20 человек, чтобы создать комфортную и рабочую атмосферу. Для тренингов необходима одежда спортивного типа и удобная обувь.\n'
       }, {
-        text: '3'
+        title: 'Место расположения',
+        textList: [{
+          title: 'ст. метро Маяковского\n',
+          text: ''
+        }, {
+          title: 'ст. метро Дубровка\n',
+          text: ''
+        }]
+      }, {
+        title: 'Расписание\n',
+        textList: [{
+          title: 'Ноябрь -  курс “Ощущения”',
+          text: ''
+        }, {
+          title: 'Март-апрель -  курс “Погружение”',
+          text: ''
+        }, {
+          title: 'Июнь - курс “Легкость”',
+          text: ''
+        }]
+      }, {
+        title: 'Стоимость (продолжительность) занятий ',
+        textList: [{
+          title: 'курс “Ощущения”',
+          text: 'Одно занятие – 1500 руб. (2 часа)  \n' + '8 занятий – 7 000 руб.'
+        }, {
+          title: 'курс “Легкость”',
+          text: 'Одно занятие – 1500 руб. (2 часа)  \n' + '8 занятий – 7 000 руб.'
+        }, {
+          title: 'курс “Погружение”',
+          text: 'Разовое занятие – 1500 руб. (2 часа)  \n' + 'Первый блок (8 занятий по 2 часа) – 7 000 руб.\n' + 'Второй блок (8 занятий по 2 часа) - 7 500 руб.'
+        }]
       }]
     }, {
       'image': 'images/leaves/akterskie_intensivi.png',
@@ -23300,11 +23333,32 @@ var _hoisted_1 = {
   "class": "py-10 flex flex-col items-center"
 };
 var _hoisted_2 = {
-  "class": "leaf_text_block"
+  key: 0,
+  "class": "leaf_text_block",
+  style: {
+    "animation-name": "leftToRight"
+  }
+};
+var _hoisted_3 = {
+  key: 1,
+  "class": "leaf_text_block",
+  style: {
+    "animation-name": "rightToLeft"
+  }
+};
+var _hoisted_4 = {
+  key: 0,
+  "class": "columns-2"
 };
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($props.textBlocks, function (textBlock, i) {
-    return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(textBlock.title), 1 /* TEXT */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(textBlock.text), 1 /* TEXT */)]);
+    return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("            Если четный индекс, анимация слева направо"), i % 2 === 0 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(textBlock.title), 1 /* TEXT */), textBlock.textList ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+      key: 0
+    }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)(textBlock.textList, function (listItem) {
+      return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(listItem.title), 1 /* TEXT */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(listItem.text), 1 /* TEXT */)]);
+    }), 256 /* UNKEYED_FRAGMENT */)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(textBlock.text), 1 /* TEXT */)])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("            Если нечетный индекс, анимация справа налево"), i % 2 === 1 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(textBlock.title), 1 /* TEXT */), textBlock.textList ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_4, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)(textBlock.textList, function (listItem) {
+      return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(listItem.title), 1 /* TEXT */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(listItem.text), 1 /* TEXT */)]);
+    }), 256 /* UNKEYED_FRAGMENT */))])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(textBlock.text), 1 /* TEXT */)])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)], 64 /* STABLE_FRAGMENT */);
   }), 256 /* UNKEYED_FRAGMENT */))]);
 }
 

@@ -6,12 +6,40 @@ defineProps({
 
 <template>
     <div class="py-10 flex flex-col items-center">
-        <div
-            v-for="(textBlock, i) in textBlocks"
-            class="leaf_text_block ">
-            <p>{{ textBlock.title }}</p>
-            <span>{{ textBlock.text }}</span>
-        </div>
+        <template
+            v-for="(textBlock, i) in textBlocks">
+            <!--            Если четный индекс, анимация слева направо-->
+            <div
+                class="leaf_text_block"
+                v-if="i % 2 === 0"
+                style="animation-name: leftToRight">
+                <p>{{ textBlock.title }}</p>
+                <div
+                    v-if="textBlock.textList"
+                    v-for="listItem in textBlock.textList">
+                    <p>{{ listItem.title }}</p>
+                    <span>{{ listItem.text }}</span>
+                </div>
+                <span>{{ textBlock.text }}</span>
+            </div>
+            <!--            Если нечетный индекс, анимация справа налево-->
+            <div
+                class="leaf_text_block"
+                v-if="i % 2 === 1"
+                style="animation-name: rightToLeft">
+                <p>{{ textBlock.title }}</p>
+                <div
+                    v-if="textBlock.textList"
+                    class="columns-2">
+                    <div
+                        v-for="listItem in textBlock.textList">
+                        <p>{{ listItem.title }}</p>
+                        <span>{{ listItem.text }}</span>
+                    </div>
+                </div>
+                <span>{{ textBlock.text }}</span>
+            </div>
+        </template>
     </div>
 </template>
 
@@ -22,7 +50,7 @@ $toTop: 200px;
 $toBottom: 200px;
 
 .leaf_text_block {
-    background-image: url('/images/cloud_bg.png');
+    background: linear-gradient(90deg, rgba(251, 251, 251, 1) 65%, rgba(174, 174, 200, 1) 100%, rgba(0, 212, 255, 1) 100%);
     display: flex;
     flex-direction: column;
     width: 50%;
@@ -31,7 +59,6 @@ $toBottom: 200px;
     border-radius: 38px;
 
     position: relative;
-    animation-name: leftToRight;
     animation-duration: 1.2s;
 
     p {
@@ -62,7 +89,7 @@ $toBottom: 200px;
 @keyframes rightToLeft {
     0% {
         left: $toRight;
-        top: 30%;
+        top: $toTop;
         opacity: 0
     }
     100% {
