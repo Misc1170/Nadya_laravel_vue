@@ -7,24 +7,17 @@ module.exports = {
         alias: {
             '@images': path.join(__dirname, 'public/images/'),
         }
-    },
-    module: {
-        rules: [
-            // ... other rules
+    }, module: {
+        rules: [// ... other rules
             {
-                test: /\.vue$/,
-                loader: 'vue-loader'
-            }
-        ]
-    },
-    plugins: [
-        // make sure to include the plugin!
-        new VueLoaderPlugin()
-    ]
+                test: /\.vue$/, loader: 'vue-loader'
+            }]
+    }, plugins: [// make sure to include the plugin!
+        new VueLoaderPlugin()]
 }
-mix.js('resources/js/app.js', 'public/js')
-    .vue()
+mix.vue()
+    .js('resources/js/app.js', 'public/js')
+    .sass('resources/scss/fonts.scss', 'public/css')
+    .postCss('resources/css/app.css', 'public/css', [require("tailwindcss"),])
     .copyDirectory('resources/images', 'public/images')
-    .postCss('resources/css/app.css', 'public/css', [
-        require("tailwindcss"),
-    ]);
+    .copyDirectory('resources/fonts', 'public/fonts');

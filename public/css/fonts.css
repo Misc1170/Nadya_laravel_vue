@@ -1,0 +1,24 @@
+@font-face {
+  font-family: "Bona-Nova-Regular";
+  font-style: normal;
+  font-weight: 400;
+  src: url(/fonts/BonaNova-Regular.ttf?1e4e07368805fade310686568be018ab) format("ttf"), url(/fonts/BonaNova-Regular.otf?f479e53843222da6caced022dc636aaf) format("otf");
+}
+@font-face {
+  font-family: "Bona-Nova-Bold";
+  font-style: normal;
+  font-weight: 700;
+  src: url(/fonts/BonaNova-Bold.ttf?a887e7bd2047b3af7ca11d763d7d3e4e) format("ttf"), url(/fonts/BonaNova-Bold.otf?94501f139ba538fe6439647086d4e9e7) format("otf");
+}
+span {
+  font-family: "Bona-Nova-Regular", serif;
+}
+
+p {
+  line-height: 24px;
+  font-family: "Bona-Nova-Regular", serif;
+}
+
+h2 {
+  font-family: "Bona-Nova-Bold", sans-serif;
+}
